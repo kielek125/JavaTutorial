@@ -1,0 +1,6 @@
+[TRACE] [Kto] root [Opis błędu] - Wywołanie TRACE - [Data wpisu] 2019-07-31 18:15:00,751 
+[FATAL] [Kto] root [Opis błędu] - Wywołanie FATAL - [Data wpisu] 2019-07-31 18:15:00,751 
+[ERROR] [Kto] root [Opis błędu] - Wywołanie ERROR - [Data wpisu] 2019-07-31 18:15:00,751 
+[WARN] [Kto] root [Opis błędu] - Wywołanie WARN - [Data wpisu] 2019-07-31 18:15:00,751 
+[INFO] [Kto] root [Opis błędu] - Wywołanie INFO - [Data wpisu] 2019-07-31 18:15:00,752 
+[DEBUG] [Kto] root [Opis błędu] - Wywołanie DEBUG - [Data wpisu] 2019-07-31 18:15:00,752 
