@@ -1,31 +1,15 @@
 package Start;
 
-
-
-import Algorytmy2.QuickSort;
-import Algorytmy2.Zadanie1;
-import Algorytmy2.Zadanie2;
-
-import java.util.logging.Logger;
-import javax.swing.JButton;
-import javax.swing.JCheckBox;
-import javax.swing.JFileChooser;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import java.lang.reflect.Array;
-import java.util.*;
+import Algorytmy2.Zadanie11.Zadanie11;
+import Algorytmy2.Zadanie12;
 
 public class StartUp {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
-        List<Integer> array = Arrays.asList(1, 5, 8, 3, 45, 72, 4, 5, 32, 7, 16, 5, 3, 54, 6, 71);
-        List<Integer> array2 = Arrays.asList(2,4,8);
+        //https://javarevisited.blogspot.com/2017/07/top-50-java-programs-from-coding-Interviews.html
+        //Zadanie6Test.TestDeque();
+        Zadanie12.PrintDuplicateCharacters("Bartosz to jest super gośćć");
 
-        long[] array3 = {1,5,55,6,6,6,6,3,4,5,2,9,3,7,3,5,1,2,6,3,45,2,45,2,543,9,9,9,9,9,5,34,4,4,9,9,9,3,3,4,455,45};
-        QuickSort.quickSort(array3, 0, array3.length - 1);
-        System.out.println(Zadanie2.binarySearchGetFirst(array3, 9));
-        System.out.println(Zadanie2.binarySearchGetLast(array3, 9));
-        System.out.println(Zadanie2.binarySearch(array3, 9));
         //System.out.println("Parzyste: " + Zadanie1.returnEven(array));
         //System.out.println("Nieparzyste: " + Zadanie1.returnOdd(array));
 
