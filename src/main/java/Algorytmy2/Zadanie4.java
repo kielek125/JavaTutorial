@@ -25,7 +25,7 @@ public class Zadanie4 {
         if(input == null || input.isEmpty()){
             return input;
         }
-
-        return input.charAt(input.length()- 1) + Reverse(input.substring(0, input.length() - 1));
+        char temp = input.charAt(input.length()- 1);
+        return  temp + Reverse(input.substring(0, input.length() - 1));
     }
 }
