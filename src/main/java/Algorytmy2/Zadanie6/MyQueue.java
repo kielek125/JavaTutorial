@@ -37,7 +37,7 @@ public class MyQueue<T> implements IQueue<T> {
         return null;
     }
 
-    public T Pool() {
+    public T Poll() {
         if (size > 0) {
             T element = Peek();
             T[] tempArray = (T[])new Objects[elements.length - 1];

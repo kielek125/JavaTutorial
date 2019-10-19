@@ -3,7 +3,7 @@ package Algorytmy2.Zadanie6;
 public class Zadanie6Test {
 
     public static void TestQueue() throws Exception {
-        IQueue<String> myQueue = new MyQueue<String>();
+        IQueue<String> myQueue = new MyQueue<>();
         String temp = myQueue.Peek();
         myQueue.Add("Bartosz");
         System.out.println(myQueue.Size());
@@ -17,18 +17,18 @@ public class Zadanie6Test {
         myQueue.Add("Michal");
         System.out.println(myQueue.Size());
         System.out.println(myQueue.Peek());
-        myQueue.Remove();
-        System.out.println(myQueue.Size());
-        System.out.println(myQueue.Pool());
 
         System.out.println(myQueue.Size());
-        System.out.println(myQueue.Pool());
+        System.out.println(myQueue.Poll());
 
         System.out.println(myQueue.Size());
-        System.out.println(myQueue.Pool());
+        System.out.println(myQueue.Poll());
 
         System.out.println(myQueue.Size());
-        System.out.println(myQueue.Pool());
+        System.out.println(myQueue.Poll());
+
+        System.out.println(myQueue.Size());
+        System.out.println(myQueue.Poll());
     }
     public static void TestDeque() throws Exception {
         IQueue<String> myQueue = new MyDeque<String>();
@@ -45,17 +45,17 @@ public class Zadanie6Test {
         myQueue.Add("Michal");
         System.out.println(myQueue.Size());
         System.out.println(myQueue.Peek());
-        myQueue.Remove();
-        System.out.println(myQueue.Size());
-        System.out.println(myQueue.Pool());
 
         System.out.println(myQueue.Size());
-        System.out.println(myQueue.Pool());
+        System.out.println(myQueue.Poll());
 
         System.out.println(myQueue.Size());
-        System.out.println(myQueue.Pool());
+        System.out.println(myQueue.Poll());
 
         System.out.println(myQueue.Size());
-        System.out.println(myQueue.Pool());
+        System.out.println(myQueue.Poll());
+
+        System.out.println(myQueue.Size());
+        System.out.println(myQueue.Poll());
     }
 }

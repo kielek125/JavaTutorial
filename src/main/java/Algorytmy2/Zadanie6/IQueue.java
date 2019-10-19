@@ -4,7 +4,7 @@ public interface IQueue<T>
 {
     boolean Add(T element);
     T Peek();
-    T Pool();
+    T Poll();
     void Remove();
     int Size();
 }
