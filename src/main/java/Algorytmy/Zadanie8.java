@@ -1,32 +1,33 @@
 package Algorytmy;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 public class Zadanie8 {
 
-    public static Integer[] GetPrimeNumbers(int quantity){
+    public static int[] GetPrimeNumbers(int quantity) {
+        List<Integer> list = new ArrayList<>();
+        int index = 2;
 
-        List<Integer> primeSet = new ArrayList<>();
-
-        for(int i = 1; i <= quantity; i++){
-            boolean isPrime = CheckPrime(i);
-            if(isPrime){
-                primeSet.add(i);
+        while (list.size() < quantity) {
+            if (CheckPrime(index)) {
+                list.add(index);
             }
+            index++;
         }
-        return primeSet.stream().map(x -> x.intValue()).toArray(Integer[]::new);
+
+        return list.stream()
+                .mapToInt(x -> x)
+                .toArray();
     }
 
-    public static boolean CheckPrime(int number){
-
-        for(int i = 2; i <= number / 2; i++){
-            if(number % i == 0){
-                return false;
+    public static boolean CheckPrime(int number) {
+        for (int i = 2; i <= number / 2; i++) {
+                    if (number % i == 0) {
+                        return false;
             }
         }
+
         return true;
     }
 }

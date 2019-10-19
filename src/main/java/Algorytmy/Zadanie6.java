@@ -1,13 +1,10 @@
 package Algorytmy;
 
-import com.google.common.collect.Sets;
-
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class Zadanie6 {
 
-    public static Integer[] primeNumbers(List<Integer> list) {
+    public static int[] primeNumbers(List<Integer> list) {
 
         int n = Collections.max(list);
 
@@ -30,11 +27,22 @@ public class Zadanie6 {
                 set.add(i);
             }
         }
-
         return list.stream()
                 .distinct()
-                .filter(set::contains)
-                .map(x -> x.intValue())
-                .toArray(Integer[]::new);
+                .filter(x -> set.contains(x))
+                .mapToInt(x -> x)
+                .toArray();
+    }
+
+    public static boolean primeNumbers(long a){
+        if(a <= 1){
+            return false;
+        }
+        for (long i = 2; i*i<=a; i++){
+            if(a%i==0){
+                return false;
+            }
+        }
+        return true;
     }
 }

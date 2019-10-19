@@ -2,17 +2,27 @@ package Start;
 
 import Algorytmy2.*;
 import Algorytmy2.Zadanie11.Zadanie11;
-import Algorytmy2.Zadanie16.Zadanie16;
+import Generycznosc.*;
 
 import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Random;
 
 public class StartUp {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
 
-        //https://javarevisited.blogspot.com/2017/07/top-50-java-programs-from-coding-Interviews.html
-        Zadanie17.permutation("abcdef");
-        String[] table = {"ania","zosia"};
-        Arrays.stream(Zadanie13.Reverse(table)).forEach(System.out::println);
+
+        FruitDisplayer fruitDisplayer = new FruitDisplayer();
+
+        FancyBox<Apple> fancyAppleBox = new FancyBox<>(new Apple());
+        FancyBox<Orange> fancyOrangeBox = new FancyBox<>(new Orange());
+        FancyBox<Lemon> fancyLemonBox = new FancyBox<>(new Lemon());
+
+        fruitDisplayer.displayGenericFruitName(fancyAppleBox);
+        fruitDisplayer.displayGenericFruitName(fancyOrangeBox);
+        fruitDisplayer.displayGenericFruitName(fancyLemonBox);
+
     }
 
 }

@@ -2,7 +2,10 @@ package Algorytmy;
 
 public class Zadanie5 {
 
-    public static int NWD1(int a, int b){
+    public static long NWD1(long a, long b){
+        if(a == 0 || b == 0){
+            return 0;
+        }
         while(a != b){
             if(a > b){
                 a = a - b;
@@ -13,7 +16,7 @@ public class Zadanie5 {
         }
         return a;
     }
-    public static int NWD2(int a, int b){
+    public static long NWD2(long a, long b){
         if(b == 0){
             return a;
         }

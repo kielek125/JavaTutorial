@@ -9,22 +9,21 @@ import java.util.stream.Stream;
 
 public class Zadanie3 {
     public static int[] divide(List<Integer> list1, List<Integer> list2) {
-
-        List<Integer> results = new ArrayList<Integer>();
-        List<Boolean> list = new ArrayList<>();
+        List<Integer> results = new ArrayList<>();
+        List<Boolean> dividers = new ArrayList<>();
         for(int i : list1){
             for(int j : list2){
                 if(i % j == 0){
-                    list.add(true);
+                    dividers.add(true);
                 }
                 else{
-                    list.add(false);
+                    dividers.add(false);
                 }
             }
-            if(!list.stream().anyMatch(x -> !x)){
+            if(dividers.stream().allMatch(x -> x)){
                 results.add(i);
             }
-            list.clear();
+            dividers.clear();
         }
         return results.stream().mapToInt(Integer::intValue).toArray();
     }

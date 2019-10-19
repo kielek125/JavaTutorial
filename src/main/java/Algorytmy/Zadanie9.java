@@ -21,20 +21,27 @@ public class Zadanie9 {
     private static String[][] rzedy = {{" tysiąc ", " tysiące ", " tysięcy "},
         {" milion ", " miliony ", " milionów "},
         {" miliard ", " miliardy ", " miliardów "},
-            {" bilion ", " biliony ", " biliardów "},
+            {" bilion ", " biliony ", " bilionów "},
             {" biliard ", " biliardy ", " biliardów "}};
 
     public static String LiczbaSlownie(long wartosc)
     {
         StringBuffer sb = new StringBuffer();
 
-        if (wartosc == 0)
+        if (wartosc == 0){
             return zero;
+        }
+        if(String.valueOf(wartosc).length() > 18){
+            int temp = String.valueOf(wartosc).length();
+            return zero;
+        }
         long jednosc = wartosc % 10;
         long dziesiątki = wartosc % 100;
         long setne = (wartosc % 1000) / 100;
-        if (dziesiątki > 10 && dziesiątki < 20)
+
+        if (dziesiątki > 10 && dziesiątki < 20){
             sb.insert(0, nascie[(int)jednosc]);
+        }
         else
         {
             sb.insert(0, jednosci[(int)jednosc]);
@@ -54,14 +61,18 @@ public class Zadanie9 {
             if ((wartosc % 1000) / 10 == 0)
             {
                 //nie ma dziesiątek i setek
-                if (jednosc == 1)
+                if (jednosc == 1){
                     sb.insert(0, rzedy[rzad][0]);
-                else if (jednosc >= 2 && jednosc <= 4)
-                sb.insert(0, rzedy[rzad][1]);
-                else if (rzadIstnieje)
-                sb.insert(0, rzedy[rzad][2]);
-                if (jednosc > 1)
+                }
+                else if (jednosc >= 2 && jednosc <= 4){
+                    sb.insert(0, rzedy[rzad][1]);
+                }
+                else if (rzadIstnieje){
+                    sb.insert(0, rzedy[rzad][2]);
+                }
+                if (jednosc > 1){
                     sb.insert(0, jednosci[(int)jednosc]);
+                }
             }
             else
             {
@@ -72,10 +83,12 @@ public class Zadanie9 {
                 }
                 else
                 {
-                    if (jednosc >= 2 && jednosc <= 4)
+                    if (jednosc >= 2 && jednosc <= 4){
                         sb.insert(0, rzedy[rzad][1]);
-                    else if (rzadIstnieje)
-                    sb.insert(0, rzedy[rzad][2]);
+                    }
+                    else if (rzadIstnieje){
+                        sb.insert(0, rzedy[rzad][2]);
+                    }
                     sb.insert(0, jednosci[(int)jednosc]);
                     sb.insert(0, dziesiatki[(int)dziesiątki / 10]);
                 }
