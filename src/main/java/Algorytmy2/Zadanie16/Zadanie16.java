@@ -16,7 +16,6 @@ public class Zadanie16 {
         first.transpose();
 
         System.out.println("Po");
-
         first.print();
     }
 }
