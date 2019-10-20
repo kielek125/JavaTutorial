@@ -3,11 +3,11 @@ package Algorytmy2;
 import java.util.HashSet;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class Zadanie17{
+public class Zadanie17 {
     private static AtomicInteger counter;
     private static HashSet<String> set;
 
-    public static void permutation(String input){
+    public static void permutation(String input) {
         set = new HashSet<>();
         counter = new AtomicInteger(1);
         permutation("", input);
@@ -15,6 +15,7 @@ public class Zadanie17{
             System.out.println(counter.getAndIncrement() + ": " + x);
         });
     }
+
     private static void permutation(String perm, String word) {
         if (word.isEmpty()) {
             set.add(perm + word);
