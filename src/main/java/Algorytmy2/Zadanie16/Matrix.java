@@ -25,7 +25,6 @@ public class Matrix {
                 data[i][j] = s.nextInt();
             }
         }
-
     }
 
     public void transpose() {
@@ -46,5 +45,4 @@ public class Matrix {
             System.out.println();
         }
     }
-
 }
