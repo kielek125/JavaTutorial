@@ -18,7 +18,7 @@ public class Zadanie17 {
 
     private static void permutation(String perm, String word) {
         if (word.isEmpty()) {
-            set.add(perm + word);
+            set.add(perm);
         } else {
             for (int i = 0; i < word.length(); i++) {
                 char first = word.charAt(i);
