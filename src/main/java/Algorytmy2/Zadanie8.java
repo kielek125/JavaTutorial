@@ -2,13 +2,13 @@ package Algorytmy2;
 
 public class Zadanie8 {
 
-    public static long Factorial1(int number){
+    public static long FactorialRecursive(int number){
         if(number == 0){
             return 1;
         }
-        return number*Factorial1(--number);
+        return number*FactorialRecursive(--number);
     }
-    public static long Factorial2(int number){
+    public static long FactorialIteration(int number){
         int result = 1;
         while(number != 0){
             result = result*number;
