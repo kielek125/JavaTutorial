@@ -26,7 +26,7 @@ public class Zadanie15{
             }
         }
 
-        return sbSecond.length()==0 ? true : false;
+        return sbSecond.length() == 0;
     }
     public static boolean IsAnagram3(String word, String anagram){
         if(word.length() != anagram.length()){
@@ -38,7 +38,7 @@ public class Zadanie15{
         for(char c : chars){
             int index = anagram.indexOf(c);
             if(index != -1){
-                anagram = anagram.substring(0,index) + anagram.substring(index +1, anagram.length());
+                anagram = anagram.substring(0,index) + anagram.substring(index +1);
             }else{
                 return false;
             }

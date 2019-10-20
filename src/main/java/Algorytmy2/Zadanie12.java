@@ -3,6 +3,7 @@ package Algorytmy2;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
+import java.util.TreeMap;
 
 public class Zadanie12 {
 

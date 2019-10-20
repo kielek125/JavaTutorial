@@ -9,7 +9,7 @@ public class Zadanie8 {
         return number*FactorialRecursive(--number);
     }
     public static long FactorialIteration(int number){
-        int result = 1;
+        long result = 1;
         while(number != 0){
             result = result*number;
             number--;
