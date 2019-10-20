@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Zadanie17{
-    public static AtomicInteger counter;
+    private static AtomicInteger counter;
     private static HashSet<String> set;
 
     public static void permutation(String input){
